@@ -1,18 +1,3 @@
-Работа с API приложения для ведения списка задач Simple To Do list с использованием Postman:
-Создать коллекцию, в которую поместить запросы из заданий 01 - 12 https://apichallenges.herokuapp.com/gui/challenges
-    • при выполнении любого задания, нужно указать хедер X-Challenger и его значение в блоке Headers запроса.
-Задание необходимо сдать в виде:
-    • ссылки на список задач, в котором для заданных задач статус true;
-    • файла коллекции.
-Ссылка имеет вид https://apichallenges.herokuapp.com/gui/challenges/<значение_вашего_идентификатора>
-(пример: https://apichallenges.herokuapp.com/gui/challenges/d297672c-4c11-412c-8f83-4137bf735959)
-Документация API: https://apichallenges.herokuapp.com/docs
-Вид самого приложения: https://apichallenges.herokuapp.com/gui/instances?entity=todo
-Задание со звездочкой:
-Для сайта https://try.vikunja.io подготовьте три рабочих GET запроса и два рабочих PUT запроса.
-Задание необходимо сдать в виде:
-    • файла коллекции;
-    • документа с запросами в curl и описанием действий запроса с точки зрения функциональности для пользователя.
 
 
 {
