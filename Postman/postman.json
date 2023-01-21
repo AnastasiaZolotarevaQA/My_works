@@ -1,0 +1,715 @@
+Работа с API приложения для ведения списка задач Simple To Do list с использованием Postman:
+Создать коллекцию, в которую поместить запросы из заданий 01 - 12 https://apichallenges.herokuapp.com/gui/challenges
+    • при выполнении любого задания, нужно указать хедер X-Challenger и его значение в блоке Headers запроса.
+Задание необходимо сдать в виде:
+    • ссылки на список задач, в котором для заданных задач статус true;
+    • файла коллекции.
+Ссылка имеет вид https://apichallenges.herokuapp.com/gui/challenges/<значение_вашего_идентификатора>
+(пример: https://apichallenges.herokuapp.com/gui/challenges/d297672c-4c11-412c-8f83-4137bf735959)
+Документация API: https://apichallenges.herokuapp.com/docs
+Вид самого приложения: https://apichallenges.herokuapp.com/gui/instances?entity=todo
+Задание со звездочкой:
+Для сайта https://try.vikunja.io подготовьте три рабочих GET запроса и два рабочих PUT запроса.
+Задание необходимо сдать в виде:
+    • файла коллекции;
+    • документа с запросами в curl и описанием действий запроса с точки зрения функциональности для пользователя.
+
+
+{
+	"info": {
+		"_postman_id": "df7cb47e-8c77-477e-8d98-bf459da9082c",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24397475"
+	},
+	"item": [
+		{
+			"name": "TEST",
+			"item": [
+				{
+					"name": "X-Challenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/challenger",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"challenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/challenges",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/challenges",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"challenges"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/todo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/todos/{id} (200)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos/285",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos",
+								"285"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/todos/{id} (404)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos/21",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HEAD /todos (200)",
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /todos (201)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\"title\": \"updated title\"\r\n \t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos (200) ?filter",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos?doneStatus=true",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "doneStatus",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /todos (400) doneStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /todos/{id} (200)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\"title\": \"updated title\"\r\n \t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos/316",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos",
+								"316"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /todos/{id} (200)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos/316",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos",
+								"316"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OPTIONS /todos (200)",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos (200) XML",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos (200) JSON",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos
+ (200) XML pref",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml, application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos (200) no accept",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /todos (406)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/gzip",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create new todo\",\r\n       \"doneStatus\": \"bob\",\r\n       \"description\": \"created via insomnia\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /todos XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{todo}\r\n{doneStatus}true{/doneStatus}\r\n{description/}\r\n{title}scan paperwork{/title}\r\n{/todo}",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /todos JSON",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Challenger",
+								"value": "2130e949-26c0-48ec-b48a-7b3732d9138f",
+								"type": "text"
+							},
+							{
+								"key": "Acce",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"title\": \"create todo process payroll\",\r\n       \"doneStatus\": true,\r\n       \"description\": \"\"\r\n     }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apichallenges.herokuapp.com/todos",
+							"protocol": "https",
+							"host": [
+								"apichallenges",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
